@@ -3,7 +3,7 @@ let contactText = document.querySelector('.contactText');
 
 
 function homePageText() {
-    let niz = ["<img src='./img/logo.png'>", "Štampa velikih formata", "Dizajn i idejna rešenja", "Uvek dostupni za Vas", "Pogledajte u galeriji naše radove...", "<a href='www.google.com'><img src='./img/logo.png'></a>" ]
+    let niz = ["<img src='./img/logo.png' width='70%'>", "Štampa velikih formata", "Dizajn i idejna rešenja", "Uvek dostupni za Vas", "Pogledajte naše radove...", "<a href='onama.html'>Galerija...</a>" ]
 
     for(let i=0; i<niz.length; i++) {
         setTimeout(() => {
