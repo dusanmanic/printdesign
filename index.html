@@ -22,6 +22,29 @@
         </div>
     </div>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBnV_KZfQ3cdPvYkTEJqR3Z4KDZDkTLaBY",
+        authDomain: "print-design-project.firebaseapp.com",
+        databaseURL: "https://print-design-project.firebaseio.com",
+        projectId: "print-design-project",
+        storageBucket: "print-design-project.appspot.com",
+        messagingSenderId: "425733073226",
+        appId: "1:425733073226:web:518e6eaa37fbdde5b7f9b3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    let db = firebase.firestore()
+    </script>
+
     <script id="textChage" src="textChange.js" async></script>
 </body>
 </html>
