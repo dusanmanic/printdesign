@@ -4,4 +4,4 @@ function pageScroll() {
     oNamaDiv.scrollBy(0,1);
     scrolldelay = setTimeout(pageScroll,45);
 }
-pageScroll()
+//pageScroll()

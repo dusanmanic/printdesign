@@ -75,20 +75,21 @@ listRefVizitke.listAll().then(function(res) {
         let img = document.createElement('img')
         img.setAttribute('src', item)
         img.setAttribute('class', 'slikeAlbum')
-        img.setAttribute('id', 'vizitke')
         divSlike.appendChild(img)
         img.addEventListener('click', event => {
             let divVizitke = document.getElementById('vizitke')
             counter++
             let clickImageUrl = event.target.currentSrc
+
             console.log(event.target.currentSrc)
             console.log(event.target.id)
             console.log(counter)
+            
             if(counter === 1) {
                 divVizitke.style.display = 'none'
                 let klikSlika = document.createElement('img')
                 let popUp = document.getElementById('popUp')
-                popUp.style.display = 'block'
+                popUp.style.display = 'flex'
                 console.log(clickImageUrl)
                 klikSlika.setAttribute('src', clickImageUrl)
                 klikSlika.setAttribute('class', 'slikaVeca')
@@ -98,7 +99,8 @@ listRefVizitke.listAll().then(function(res) {
                     counter++
                     if(counter === 2) {
                         popUp.innerText = ""
-                        divVizitke.style.display = 'block'
+                        popUp.style.display = 'none'
+                        divVizitke.style.display = 'flex'
                         counter = 0
                     }   
                 })
