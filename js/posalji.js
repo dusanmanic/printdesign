@@ -21,6 +21,7 @@ mountainsRef.name === mountainImagesRef.name            // true
 mountainsRef.fullPath === mountainImagesRef.fullPath    // false
 */
 
+/*
 db.collection('print_design')
 .get()
 .then(snapshot => {
@@ -37,6 +38,7 @@ db.collection('print_design')
     }
 
 })
+*/
 
 let storageRef = storage.ref()
 let listRef = storageRef.child('images')
