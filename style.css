@@ -20,16 +20,18 @@ body {
     width: 150px;
     height: 120px;
 }
-#vizitke {
+#slikePozicija {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
+    overflow: auto;
 }
 #popUp{
     align-items: center;
     margin: auto;
 }
+
 .slikaVeca {
     width: 100%;
     border: 1px solid white;
@@ -92,7 +94,7 @@ header {
     margin: auto;
     width: 80vw;
     height: 80vh;
-    overflow-y: scroll;
+    overflow: auto;
     
 }
 .divOnamaPage::-webkit-scrollbar-track

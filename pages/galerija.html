@@ -20,61 +20,48 @@
 
         <div class="galTumb">
             <div class="vizitKarte">
-                <a href="./galerija-vizitke.html" class="galerija">
-                    <img src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
-                </a>
+                <img id="vizitke" src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
                 <span>Vizit karte</span>
             </div>
     
             <div class="brending">
-                <a href="./galerija-vizitke.html" class="galerija">
-                    <img src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
-                </a>
+                <img id="brendiranje" src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
                 <span>Brendiranje</span>
             </div>
     
             <div class="autoGrafika">
-                <a href="./galerija-vizitke.html" class="galerija">
-                    <img src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
-                </a>
+                <img id="autoGrafika" src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
                 <span>Auto grafika</span>
             </div>
     
             <div class="flajeri">
-                <a href="./galerija-vizitke.html" class="galerija">
-                    <img src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
-                </a>
+                <img id="flajeri" src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
                 <span>Flajeri</span>
             </div>
     
             <div class="fotoSolje">
-                <a href="./galerija-vizitke.html" class="galerija">
-                    <img src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
-                </a>
+                <img id="fotoSolje" src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
                 <span>Foto šolje</span>
             </div>
     
             <div class="promoMaterijali">
-                <a href="./galerija-vizitke.html" class="galerija">
-                    <img src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
-                </a>
+                <img id="promoMaterijali" src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
                 <span>Promo materijali</span>
             </div>
     
             <div class="cerade">
-                <a href="./galerija-vizitke.html" class="galerija">
-                    <img src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
-                </a>
+                <img id="cerade" src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
                 <span>Cerade</span>
             </div>
     
             <div class="reklame">
-                <a href="./galerija-vizitke.html" class="galerija">
-                    <img src="../img/1137.jpg" width="150px" style="border-radius: 15px;"  alt="">
-                </a>
+                <img id="reklame" src="../img/1137.jpg" width="150px" style="border-radius: 15px;" alt="">
                 <span>Reklame</span>
             </div>
         </div>
+
+        <div class="slike" id="slikePozicija" style="z-index: 0;"></div>
+        <div class="slike" id="popUp" style="z-index: 1;"></div>
 
     </div>
 
@@ -103,6 +90,6 @@
     let storage = firebase.storage()
     </script>
 
-    <script src="../js/script.js"></script>
+    <script type="module" src="../js/galerija.js"></script>
 </body>
 </html>
