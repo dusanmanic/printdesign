@@ -7,6 +7,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .galTumb{
     display: flex;
     flex-wrap: wrap;
