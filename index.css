@@ -1,0 +1,220 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-image: url('img/back.jpg'); */
+    transition: background-image 1.2s ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    will-change: auto;
+}
+.divHolder {
+    display: flex;
+    flex-direction: column;
+}
+button{
+    width: 75px;
+    margin: auto;
+}
+.galTumb{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    overflow: auto;
+    width: 900px;
+}
+.kategorijeAlbum{
+    padding: 5px;
+    color: white;
+    text-align: center;
+    width: 150px;
+    height: 120px;
+}
+#slikePozicija {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    overflow: auto;
+}
+#popUp{
+    align-items: center;
+    margin: auto;
+}
+
+.slikaVeca {
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 15px 0px;
+    
+}
+.slikeAlbum {
+    width: 150px;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 15px 0px;
+}
+.galerija{
+    padding: 0;
+    width: 150px;
+    height: 100px;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+a:hover {
+    background-color: rgb(124, 124, 124, 0.5);
+}
+p {
+    color: white;
+}
+ul {
+    padding: 0;
+    float: right;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+}
+li {
+    height: 8vh;
+    list-style: none;
+    margin: auto;
+}
+header {
+    background-color: rgb(56, 56, 56, 0.5);
+    height: 8vh;
+}
+#container {
+    height: 92vh;
+    display: flex;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+.divHomePage, .divContactPage {
+    text-align: center;
+    margin: auto;
+    width: 90vw;
+    border-radius: 20px;
+}
+.divOnamaPage {
+    text-align: left;
+    margin: auto;
+    width: 80vw;
+    height: 80vh;
+    overflow: auto;
+    
+}
+.divOnamaPage::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+.divOnamaPage::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+.divOnamaPage::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+.homeText {
+    font-size: 30px;
+    color: white;
+    transition: background-image 1.2s ease-out;
+}
+.contactText, .oNamaText {
+    font-size: 20px;
+    color: white;
+}
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:500px;
+    width:550px;
+    margin:auto;
+}
+#gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    border-radius: 15px;
+    height:350px;
+    width:550px;
+}
+
+
+@media only screen and (max-width: 400px){
+    #container {
+        height: 92vh;
+        display: flex;
+        background-color: rgb(0, 0, 0, 0.5);
+    }
+    ul {
+        background-color: rgb(56, 56, 56, 0.5);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 8vh;
+    }
+    a {
+        font-size: 15px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(56, 56, 56, 0.0);
+        height: 8vh;
+    }
+    .divOnamaPage {
+        margin-top: 5px;
+        overflow-y: scroll;
+        height: 90%;
+    }
+    a:hover {
+        background-color: rgb(124, 124, 124, 0.5);
+    }
+    .slike {
+        overflow-y: scroll;
+        height: 100%;
+    }
+    .slike::-webkit-scrollbar {
+        display: none;
+    }
+    .divOnamaPage::-webkit-scrollbar {
+        display: none;
+    }
+    #popUp{
+        justify-content: center;
+    }
+    .slikaVeca {
+        width: 90%;
+        border: 1px solid white;
+        border-radius: 15px 0px;
+        
+    }
+    .mapouter{
+        position:relative;
+        text-align:right;
+        height:250px;
+        width:250px;
+        margin:auto;
+    }
+    #gmap_canvas {
+        overflow:hidden;
+        background:none!important;
+        border-radius: 15px;
+        height:250px;
+        width:250px;
+    }
+}
