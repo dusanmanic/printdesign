@@ -43,7 +43,8 @@ button{
 }
 
 .slikaVeca {
-    width: 100%;
+    margin: auto;
+    width: 70%;
     border: 1px solid white;
     border-radius: 15px 0px;
     
@@ -195,6 +196,7 @@ header {
         justify-content: center;
     }
     .slikaVeca {
+        margin: auto;
         width: 90%;
         border: 1px solid white;
         border-radius: 15px 0px;

@@ -86,24 +86,7 @@ export function showImages(kategorija) {
           divHolder.appendChild(img)
           divSlike.appendChild(divHolder)
 
-          if(localStorage.getItem("vrednost").includes("jeste")) {
-            let btnDel = document.createElement('button')
-            btnDel.innerHTML = "Obrisi"
-            btnDel.id = itemRefVizitke.name
-            divHolder.appendChild(btnDel)
-
-            btnDel.addEventListener('click', event => {
-              console.log(event.target.id)
-              divHolder.remove()
-              let imeSlike = event.target.id
-              let deleteRef = storageRef.child(`images/${kategorija}/${imeSlike}`)
-              deleteRef.delete()
-             
-            })
-          }
-
-
-            img.addEventListener('click', event => {
+          img.addEventListener('click', event => {
               let divVizitke = document.getElementById(`slikePozicija`)
               counter++
               let clickImageUrl = event.target.currentSrc
@@ -134,6 +117,24 @@ export function showImages(kategorija) {
                   })
             }
           })
+
+          if(localStorage.getItem("vrednost").includes("jeste")) {
+            let btnDel = document.createElement('button')
+            btnDel.innerHTML = "Obrisi"
+            btnDel.id = itemRefVizitke.name
+            divHolder.appendChild(btnDel)
+
+            btnDel.addEventListener('click', event => {
+              console.log(event.target.id)
+              divHolder.remove()
+              let imeSlike = event.target.id
+              let deleteRef = storageRef.child(`images/${kategorija}/${imeSlike}`)
+              deleteRef.delete()
+             
+            })
+          }
+
+
         })
       });
     }).catch(function(error) {
