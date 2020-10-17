@@ -7,14 +7,22 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.divHolder {
+    display: flex;
+    flex-direction: column;
+}
+button{
+    width: 75px;
+    margin: auto;
+}
 .galTumb{
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
+    overflow: auto;
 }
-.vizitKarte, .brending, .autoGrafika, .flajeri, .fotoSolje, .promoMaterijali, .reklame, .cerade{
+.kategorijeAlbum{
     padding: 5px;
     color: white;
     text-align: center;

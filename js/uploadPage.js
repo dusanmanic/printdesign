@@ -13,6 +13,7 @@ function izaberiKategoriju() {
     izabranaKategorija = kategorija.value
     console.log(kategorija.value)
 }
+
 fileUpload.addEventListener('change', event => {
     // console.log(event.target.files)
     // console.log(event.target.files[0])
@@ -35,11 +36,43 @@ fileUpload.addEventListener('change', event => {
             toStorage.put(slika[i])
             // console.log(slika[i])
             // console.log(slika[i].name)
-            console.log(slikaIme)
+            //console.log(slikaIme)
             }
     }
 
 
 })
+localStorage.setItem('vrednost', "nije")
+let btnPromeni = document.querySelector('.promeni')
+let clicked = 0;
+let vrednost
+let localStorageVrednost = localStorage.getItem("vrednost")
 
-console.log(izabranaKategorija)
+console.log(localStorageVrednost)
+
+if(localStorageVrednost.includes("jeste")) {
+    btnPromeni.innerHTML = `"obrisi" dugme ukljuceno`
+    clicked = 0;
+} else {
+    btnPromeni.innerHTML = `"obrisi" dugme iskljuceno`
+    clicked = 1;
+}
+
+btnPromeni.addEventListener('click', event => {
+    event.preventDefault()
+    clicked++
+    console.log(clicked)
+    
+    if(clicked == 1) {
+        btnPromeni.innerHTML = `"obrisi" dugme iskljuceno`
+        localStorage.setItem('vrednost', "nije")
+    } else if(clicked == 2) {
+        btnPromeni.innerHTML = `"obrisi" dugme ukljuceno`
+        localStorage.setItem('vrednost', "jeste")
+        clicked = 0        
+    }
+    console.log(localStorage.getItem("vrednost"))
+
+})
+
+

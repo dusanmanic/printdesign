@@ -42,6 +42,8 @@ db.collection('print_design')
 
 
 
+
+
 export function showImages(kategorija) {
   let storageRef = storage.ref()
   // let listRef = storageRef.child('images')
@@ -71,17 +73,41 @@ export function showImages(kategorija) {
       });
       res.items.forEach(function(itemRefVizitke) {
         // All the items under listRef.
+
         console.log(`uslo ovde 2`)
         itemRefVizitke.getDownloadURL().then(item => {
           let divSlike = document.querySelector('.slike')
+          let divHolder = document.createElement('div')
           let img = document.createElement('img')
+          divHolder.setAttribute('class', 'divHolder')
           img.setAttribute('src', item)
           img.setAttribute('class', 'slikeAlbum')
-          divSlike.appendChild(img)
-          img.addEventListener('click', event => {
+          
+          divHolder.appendChild(img)
+          divSlike.appendChild(divHolder)
+
+          if(localStorage.getItem("vrednost").includes("jeste")) {
+            let btnDel = document.createElement('button')
+            btnDel.innerHTML = "Obrisi"
+            btnDel.id = itemRefVizitke.name
+            divHolder.appendChild(btnDel)
+
+            btnDel.addEventListener('click', event => {
+              console.log(event.target.id)
+              divHolder.remove()
+              let imeSlike = event.target.id
+              let deleteRef = storageRef.child(`images/${kategorija}/${imeSlike}`)
+              deleteRef.delete()
+             
+            })
+          }
+
+
+            img.addEventListener('click', event => {
               let divVizitke = document.getElementById(`slikePozicija`)
               counter++
               let clickImageUrl = event.target.currentSrc
+              
 
               // console.log(event.target.currentSrc)
               // console.log(event.target.id)
@@ -114,6 +140,7 @@ export function showImages(kategorija) {
       // Uh-oh, an error occurred!
     });
 }
+
 
 
 /*
