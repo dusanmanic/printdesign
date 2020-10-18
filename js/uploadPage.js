@@ -60,6 +60,8 @@ function logout () {
 
                 if(localStorage.getItem('curentUser') === userInfo.information.user) {
 
+                    localStorage.setItem("abtn", "Log in")
+
                     let datum = new Date();
                     let update = {
                         logged_in: firebase.firestore.Timestamp.fromDate(datum),

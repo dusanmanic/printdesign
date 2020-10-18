@@ -79,10 +79,12 @@ function logging() {
                             logged_in: firebase.firestore.Timestamp.fromDate(datum),
                             log: true
                         }
+                        
 
                         db.collection('login_info').doc(`${userInfo.information.user}`).update(update)
                         
                         setTimeout(() => {
+                            localStorage.setItem("abtn", "Update")
                             window.location.href = "../pages/uploadPage.html"
                         }, 1500)
                     } else {
