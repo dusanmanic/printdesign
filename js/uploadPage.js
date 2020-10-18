@@ -7,20 +7,34 @@ function checker() {
             let login_info = snapshot.docs
             login_info.forEach(user => {
                 let userInfo = user.data()
-                
+
                 datum = new Date (),
                 datumProvera = new Date ( datum );
                 datumProvera.setMinutes ( new Date().getMinutes() + 30 );
 
                 let trenutniUser = localStorage.getItem('curentUser')
                 console.log(trenutniUser)
-                
-                if(userInfo.log && trenutniUser === userInfo.information.user) {
-                    document.body.style.display = "block"
-                    console.log(`Korisnik je logovan`)
-                } else {
-                    window.location.href = '../login/login.html'
+
+                if(trenutniUser === userInfo.information.user) {
+                    console.log(`jeste`)
+
+                    if(userInfo.log) {
+                        console.log(`i to jeste`)
+                        
+                        document.body.style.display = "block"
+                        console.log(`Korisnik je logovan`)
+                    } else {
+                        window.location.href = '../login/login.html'
+                    }
                 }
+
+                    
+                // if(userInfo.log && trenutniUser === userInfo.information.user) {
+                //     document.body.style.display = "block"
+                //     console.log(`Korisnik je logovan`)
+                // } else {
+                //     window.location.href = '../login/login.html'
+                // }
             })
         }
     })
