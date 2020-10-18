@@ -37,6 +37,7 @@ button{
     justify-content: center;
     overflow: auto;
 }
+
 #popUp{
     align-items: center;
     margin: auto;
@@ -149,7 +150,7 @@ header {
 }
 
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 430px){
     #container {
         height: 92vh;
         display: flex;
@@ -215,5 +216,8 @@ header {
         border-radius: 15px;
         height:250px;
         width:250px;
+    }
+    .removeLi {
+        display: none;
     }
 }

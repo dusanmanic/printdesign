@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Print Design</title>
-    <link rel="stylesheet" href="index.css">
-
+    <title>Login page</title>
+    <link rel="stylesheet" href="./logger.css">
+</head>
 <body>
-    <header>     
-        <ul>
-            <li><a href="index.html">Početna</a></li>
-            <li><a href="./pages/galerija.html">Galerija</a></li>
-            <li><a href="./pages/onama.html">O nama</a></li>
-            <li><a href="./pages/contact.html">Kontakt</a></li>
-            <li class="removeLi"><a class="changeA" href="./pages/uploadPage.html">Log in</a></li>
-        </ul>
-    </header>
 
-    <div id="container">
-        <div class="divHomePage">
-            <span class="homeText"></span>
-        </div>
+<div id="container">
+
+    <div class="login">
+        <label for="username">Username:</label>
+        <input type="text" id="username">
+        <label for="password">Password:</label>
+        <input type="password" id="password"><br>
+        <button onclick="logging()">Log in</button>
+        <!-- <button onclick="signin()">Sign in</button> -->
+        <p></p>
     </div>
+
+</div>
+    
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -43,10 +44,10 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    let db = firebase.firestore()
+    let db = firebase.firestore();
+    let storage = firebase.storage()
     </script>
-
-    <script src="./js/textChange.js" ></script>
-    <script src="./script.js"></script>
+    
+    <script src="./logger.js"></script>
 </body>
 </html>
