@@ -27,6 +27,8 @@ function checker() {
                     } else {
                         window.location.href = '../login/login.html'
                     }
+                } else if(trenutniUser == null)  {
+                    window.location.href = '../login/login.html'
                 }
 
                     
